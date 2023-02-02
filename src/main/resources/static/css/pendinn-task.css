@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;  
+  }
+  body{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: red; */
+  }
+  .dashboard{
+    width: 100%;
+    height: 100%;
+    
+  }
+.table-container{
+    width: 100%;
+    height: 100%;
+    /* background-color: blueviolet;  */
+    padding: 2rem;
+}
+.actions-btn-container{
+    /* background-color: red; */
+    width: 95%;
+    height: 7%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin:0 auto;
+    
+}
+
+.action-buttons-holder{
+width: 100%;
+height: 100%;
+padding: 2rem 1rem;
+display: flex;
+flex-direction: row;
+justify-items:center;
+justify-content: space-around;
+background-color: blueviolet;
+align-items: center;
+
+}
+.action-buttons-holder > button {
+ padding: 4px 30px;
+ text-align: center;
+ border-radius: 5px;
+ cursor: pointer;
+
+}
+.action-buttons-holder input{
+    padding: 4px 30px;
+    padding-left: 4px;
+    text-align: left;
+    border-radius: 5px;
+    
+}
+.action-buttons-holder .add-task{
+   background-color: blue;
+   color: aliceblue;
+   cursor: pointer;
+
+}
+
+  table { 
+    /* border-collapse: collapse; */
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: separate;
+     border-spacing: 10px;
+  }
+
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  tr{
+    margin-top: 2rem;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+  .actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .actions .fa-solid{
+    cursor: pointer;
+  }
+  .actions .fa-solid:hover{
+    font-size: 18px;
+  }
+  
+  .actions .delete-btn{
+      color:red
+  }
+  .actions .view-btn{
+    color:yellow
+}
+.actions .update-btn{
+  color:green
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+td, th {
+  border-bottom: 1px solid black;
+}
+
+th {
+  border-top: 1px solid black;
+}

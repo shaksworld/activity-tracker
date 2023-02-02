@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="table-container">
+        <div class="actions-btn-container">
+          <h2>Welcome <span style="color: blue">Gboyegun</span></h2>
+          <div class="action-buttons-holder">
+            <button class="all-task-btn">All tasks</button>
+            <button class="pending-task">pending tasks</button>
+            <button class="completed-task">completed tasks</button>
+            <input type="search" placeholder="filter task by title" />
+            <button class="add-task">Add new task</button>
+          </div>
+        </div>
+        <div class="table-container">
+          <table>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Time created</th>
+              <th>last time updated</th>
+              <th>Last updated</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+            <tr>
+              <td>Row 1, Column 1</td>
+              <td>Row 1, Column 2</td>
+              <td>Row 1, Column 3</td>
+              <td>Row 1, Column 4</td>
+              <td>Row 1, Column 5</td>
+              <td><select name="" id=""></select></td>
+              <td class="actions">
+                <i class="fa-solid fa-trash delete-btn"></i>
+                <i class="fa-solid fa-pen-to-square update-btn"></i>
+                <i class="fa-solid fa-eye view-btn"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>Row 2, Column 1</td>
+              <td>Row 2, Column 2</td>
+              <td>Row 2, Column 3</td>
+              <td>Row 2, Column 4</td>
+              <td>Row 2, Column 5</td>
+              <td>Row 2, Column 6</td>
+              <td class="actions">
+                <i class="fa-solid fa-trash delete-btn"></i>
+                <i class="fa-solid fa-pen-to-square update-btn"></i>
+                <i class="fa-solid fa-eye view-btn"></i>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
