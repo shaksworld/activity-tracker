@@ -56,32 +56,17 @@ public class UserController {
                 newSession.setAttribute("id", loggedInUser.getId());
                 newSession.setAttribute("username", loggedInUser.getUsername());
 
-                return "dashboard";
+                return "redirect:/dashboard";
             }
         return "redirect:/login";
 
-
         }
 
-  @GetMapping("/addTask")
-  public String addTask(){
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request){
+        request.getSession().invalidate();
 
-        return "dashboard";
-  }
-    @GetMapping("users/{id}")
-    public String userPosts(@PathVariable Long id, Model model, HttpServletRequest request) throws UserNotFoundException {
-        String username = (String) request.getSession().getAttribute("username");
-        if(username == null) return "redirect:/login";
-
-        User user = userService.findUserById(id);
-
-        model.addAttribute("user", user);
-
-        return "user";
+        return "redirect:/";
     }
-
-
-
-
 
 }

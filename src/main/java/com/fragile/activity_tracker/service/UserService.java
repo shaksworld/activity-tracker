@@ -6,9 +6,11 @@ import com.fragile.activity_tracker.error.UserNotFoundException;
 
 public interface UserService {
 
-    UserDto createUser(User user);
+    User createUser(User user) throws UserNotFoundException;
 
-    UserDto findUserByEmailAndPassword(User user) throws UserNotFoundException;
+    User findUserByEmailAndPassword(User user) throws UserNotFoundException;
 
-     UserDto findUserById(Long id) throws UserNotFoundException;
+     User findUserById(Long id) throws UserNotFoundException;
+
+
 }

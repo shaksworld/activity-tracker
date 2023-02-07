@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./addTask.css" />
+    <link rel="stylesheet" th:href="@{/css/addTask.css}" />
     <title>Document</title>
   </head>
   <body>
     <div class="form-container">
       <div class="img-signup">
         <div class="img-container">
-          <img src="./images/form-image.webp" alt="" />
+          <img th:src="@{/images/form-image.webp}" alt="" />
         </div>
         <div class="signup-Container">
           <div class="form-body">
             <div class="form-title">
               <h2>Add a new task</h2>
             </div>
-            <form action="#">
+            <form th:action="@{/addTask}" th:object="${task}" method="POST">
               <div>
-                <label for="username">Title:</label>
-                <input type="text" id="username" name="username" required />
+                <label for="title">Title:</label>
+                <input type="text" th:field="*{title}" id="title" name="title" required />
               </div>
               <div>
-                <label for="username">Description:</label>
-                <input type="text" id="username" name="username" required />
+                <label for="description">Description:</label>
+                <input type="text" th:field="*{description}" id="description" name="description" required />
               </div>
+<!--              <div>-->
+<!--                <label for="time-created" >time created</label>-->
+<!--                <input type="date" th:field="*{setCreatedAt}" id="time-created" name="time-created" required />-->
+<!--              </div>-->
               <input class="update-btn" type="submit" value="Add Task" />
             </form>
           </div>

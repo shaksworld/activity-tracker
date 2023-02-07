@@ -92,7 +92,16 @@ align-items: center;
   .actions .fa-solid{
     cursor: pointer;
   }
-  .actions .fa-solid:hover{
+  .change_status .fa-solid{
+      cursor: pointer;
+  }
+.change_status{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.actions .fa-solid:hover{
     font-size: 18px;
   }
   

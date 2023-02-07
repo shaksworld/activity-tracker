@@ -20,26 +20,30 @@ public class UserServiceIpm implements UserService {
     private UserRepository userRepository;
 
     @Override
-    public UserDto createUser(User user) {
-        User savedUser = userRepository.save(user);
-        return new UserDto(savedUser.getName(), savedUser.getUsername(), savedUser.getEmail(),  user.getTasks());
+    public User createUser(User user) throws UserNotFoundException {
+        return userRepository.save(user);
     }
 
     @Override
-    public UserDto findUserByEmailAndPassword(User user) throws UserNotFoundException {
-        Optional<UserDto> foundUser = Optional.ofNullable(userRepository.findUserByEmailAndPassword(user.getEmail(), user.getPassword()));
-        if(foundUser.isPresent()) {
-            foundUser.get();
-        }throw new UserNotFoundException("Invalid email and password");
+    public User findUserByEmailAndPassword(User user) throws UserNotFoundException {
+        Optional<User> foundUser = Optional.ofNullable(userRepository.findUserByEmailAndPassword(user.getEmail(), user.getPassword()));
+        if (foundUser.isPresent()) {
+            return foundUser.get();
+        }
+        throw new UserNotFoundException("user not available");
     }
 
     @Override
-    public UserDto findUserById(Long id) throws UserNotFoundException {
+    public User findUserById(Long id) throws UserNotFoundException {
         Optional<User> user = userRepository.findById(id);
         if (user.isPresent()) {
-            return new UserDto(user.get().getName(), user.get().getUsername(), user.get().getEmail(), user.get().getTasks());
+            return user.get();
         } else {
             throw new UserNotFoundException("user not available");
         }
     }
+
+
+
+
 }
