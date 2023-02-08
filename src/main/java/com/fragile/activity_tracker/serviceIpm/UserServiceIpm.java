@@ -1,7 +1,5 @@
 package com.fragile.activity_tracker.serviceIpm;
 
-import com.fragile.activity_tracker.dto.requestDto.TaskDto;
-import com.fragile.activity_tracker.dto.requestDto.UserDto;
 import com.fragile.activity_tracker.entity.User;
 import com.fragile.activity_tracker.error.UserNotFoundException;
 import com.fragile.activity_tracker.repository.UserRepository;

@@ -120,18 +120,15 @@
     text-align: center;
      background-color: blueviolet; 
      padding: 12px 70px;
-     border-top-left-radius: 25px;
-     border-top-right-radius: 25px;
-     border-bottom-right-radius:  25px;
-     border-bottom-left-radius:  25px;
-     cursor: pointer;
+      border-radius: 25px;
+      cursor: pointer;
      color:white;
      font-size: 20px;
   } 
   form button[type="submit"]:hover{
      background-color: white; 
      color:blueviolet;
-     border-radius:3px solid blueviolet;
+     border-radius:3px;
   } 
   
 
@@ -149,10 +146,7 @@ form input[type="date"] {
    text-align: center;
     background-color: blueviolet; 
     padding: 12px 70px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius:  25px;
-    border-bottom-left-radius:  25px;
+    border-radius: 25px;
     cursor: pointer;
     color:white;
     font-size: 20px;

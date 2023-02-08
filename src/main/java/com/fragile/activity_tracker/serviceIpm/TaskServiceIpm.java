@@ -71,7 +71,7 @@ public class TaskServiceIpm implements TaskService {
         Optional<Task> optional = taskRepository.findById(id);
         if(optional.isPresent()){
             taskRepository.moveBackward("DONE", id);
-            taskRepository.updateTime(LocalDateTime.now(),  id);
+            taskRepository.completedTime(LocalDateTime.now(),  id);
         }
     }
 

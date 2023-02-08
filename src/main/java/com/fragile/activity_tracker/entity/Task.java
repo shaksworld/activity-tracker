@@ -2,10 +2,7 @@ package com.fragile.activity_tracker.entity;
 
 import com.fragile.activity_tracker.enums.Status;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -16,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="task")
+@Builder
 public class Task implements Comparable<Task> {
 
     @Id
@@ -45,6 +43,8 @@ public class Task implements Comparable<Task> {
                    name = "user_id"
            ) )
    private User users;
+
+
 
     @Override
     public int compareTo(Task o) {
