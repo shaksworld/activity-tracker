@@ -8,7 +8,7 @@ import java.util.List;
 public interface TaskService {
     Task createTask(Task task);
 
-    List<Task> getAllTask();
+//    List<Task> getAllTask();
 
     Task getTask(Long id) throws UserNotFoundException;
 
@@ -21,4 +21,8 @@ public interface TaskService {
     void changeTaskStatusToNext(Long id);
 
     void deleteTask(Long id);
+
+    List<Task> findAllTaskByUserId(Long userId);
+
+    public List<Task> getAllTask(Long userId);
 }

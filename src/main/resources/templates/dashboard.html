@@ -57,7 +57,7 @@
                     <a th:href="@{/task/delete/{id}(id=${task.id})}" th:if="${task.users.id} == ${session.id}" ><i class="fa-solid fa-trash delete-btn" ></i></a>
                    <a th:href="@{/task/edit/{id}(id=${task.id})}" th:if="${task.users.id} == ${session.id}"><i class="fa-solid fa-pen-to-square update-btn"  ></i> </a>
                        <a><i class="fa-solid fa-eye view-btn"></i></a>
-                    </td>
+                  </td>
                 </tr>
             </table>
         </div>

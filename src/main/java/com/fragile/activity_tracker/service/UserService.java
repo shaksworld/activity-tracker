@@ -10,7 +10,9 @@ public interface UserService {
 
     User findUserByEmailAndPassword(User user) throws UserNotFoundException;
 
-     User findUserById(Long id) throws UserNotFoundException;
+    User findUserById(Long id) throws UserNotFoundException;
+
+
 
 
 }

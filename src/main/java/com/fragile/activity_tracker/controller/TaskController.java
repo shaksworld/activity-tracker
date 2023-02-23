@@ -94,10 +94,13 @@ public class TaskController {
 
     @GetMapping("/dashboard")
     public String home(Model model, HttpServletRequest request) {
+
         String username = (String) request.getSession().getAttribute("username");
+        Long userId = (Long) request.getSession().getAttribute("id");
+        System.out.println(userId);
         if (username == null) return "redirect:/login";
 
-        List<Task> tasks = taskService.getAllTask();
+        List<Task> tasks = taskService.findAllTaskByUserId(userId);
         tasks.sort(Comparator.reverseOrder());
         model.addAttribute("statusList", statusList);
         model.addAttribute("tasks", tasks);
@@ -135,13 +138,13 @@ public class TaskController {
     }
 
 
-
-    @GetMapping("/tasks")
-    public String tasks(Model model) {
-        model.addAttribute("tasks", taskService.getAllTask());
-
-        return "dashboard";
-    }
+//
+//    @GetMapping("/tasks")
+//    public String tasks(Model model) {
+//        model.addAttribute("tasks", taskService.getAllTask());
+//
+//        return "dashboard";
+//    }
 
 
 
@@ -169,5 +172,7 @@ public class TaskController {
         this.taskService.changeTaskStatusToNextBackWard(id);
         return "redirect:/dashboard";
     }
+
+
 
 }

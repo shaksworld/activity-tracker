@@ -55,26 +55,26 @@ public class TaskServiceTest {
 //        verify(taskRepositoryMock, times(1)).findAll();
 //    }
 
-    @Test
-    public void testGetAllTasks() {
-        // setup mock behavior
-        Task task1 = Task.builder()
-                .id(1L)
-                .title("task1")
-                .build();
-        Task task2 = Task.builder()
-                .id(2L)
-                .title("task2")
-                .build();
-        List<Task> tasks = Arrays.asList(task1, task2);
-        when(taskRepositoryMock.findAll()).thenReturn(tasks);
-
-        // call the method being tested
-        List<Task> result = taskService.getAllTask();
-
-        // verify the results
-        Assert.assertEquals(tasks, result);
-    }
+//    @Test
+//    public void testGetAllTasks() {
+//        // setup mock behavior
+//        Task task1 = Task.builder()
+//                .id(1L)
+//                .title("task1")
+//                .build();
+//        Task task2 = Task.builder()
+//                .id(2L)
+//                .title("task2")
+//                .build();
+//        List<Task> tasks = Arrays.asList(task1, task2);
+//        when(taskRepositoryMock.findAll()).thenReturn(tasks);
+//
+//        // call the method being tested
+////        List<Task> result = taskService.getAllTask();
+//
+//        // verify the results
+//        Assert.assertEquals(tasks, result);
+//    }
 
     @Test
     public void testGetTask() throws UserNotFoundException {

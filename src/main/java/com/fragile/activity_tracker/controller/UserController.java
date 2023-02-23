@@ -1,5 +1,6 @@
 package com.fragile.activity_tracker.controller;
 
+import com.fragile.activity_tracker.entity.Task;
 import com.fragile.activity_tracker.entity.User;
 import com.fragile.activity_tracker.error.UserNotFoundException;
 import com.fragile.activity_tracker.service.UserService;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Objects;
 
 @Controller
@@ -68,5 +70,8 @@ public class UserController {
 
         return "redirect:/";
     }
+
+
+
 
 }
